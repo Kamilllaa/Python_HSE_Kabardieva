@@ -1,9 +1,5 @@
 # Tasks
 
-+ [# title](## title)
-
-##
-
 # TaskManager
 
 
