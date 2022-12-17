@@ -10,12 +10,12 @@ def prepare_row(title, rows):
         to_json_dict = dict(zip(title, row.split(",")))
         result_list = []
         for key in to_json_dict:
-            result_list.append('"{key}": "{value}"'.format(key=key, value=to_json_dict[key]))
+            result_list.append('\n\t"{key}": "{value}"'.format(key=key, value=to_json_dict[key]))
 
-        pivot += ", ".join(result_list) + "}"
-        result.append(pivot)
+        pivot += ",".join(result_list) + "\n}"
+        result.append("\n" + pivot)
 
-    result = "[" + ", ".join(result) + "]"
+    result = "[" + ", ".join(result) + "\n]"
     return result
 
 
@@ -48,5 +48,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-
 
