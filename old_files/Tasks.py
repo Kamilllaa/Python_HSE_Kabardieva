@@ -93,6 +93,9 @@ year,1999,2000,1995,1998"""
   ...
 ]
 
+t_15 = [dict(zip(list(zip(*[title.split(',') for title in input_str.split('\n')]))[0], value))
+        for value in list(zip(*[value.split(',') for value in input_str.split('\n')]))[1:]]
+
 """
 # 16. Получить сумму по столбцам у двумерного списка
 
